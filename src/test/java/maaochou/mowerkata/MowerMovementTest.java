@@ -19,7 +19,7 @@ public class MowerMovementTest {
 
         //When
         Mower mower = new Mower(initialPosition, initialDirection);
-        mower.moveForward();
+        Instruction.FORWARD.execute(mower);
 
         //Then
         assertThat(mower).returns(expectedPosition, Mower::getPosition).returns(expectedDirection, Mower::getDirection);
@@ -38,7 +38,7 @@ public class MowerMovementTest {
 
         //When
         Mower mower = new Mower(initialPosition, initialDirection);
-        mower.moveForward();
+        Instruction.FORWARD.execute(mower);
 
         //Then
         assertThat(mower).returns(expectedPosition, Mower::getPosition).returns(expectedDirection, Mower::getDirection);
@@ -57,7 +57,7 @@ public class MowerMovementTest {
 
         //When
         Mower mower = new Mower(initialPosition, initialDirection);
-        mower.moveForward();
+        Instruction.FORWARD.execute(mower);
 
         //Then
         assertThat(mower).returns(expectedPosition, Mower::getPosition).returns(expectedDirection, Mower::getDirection);
@@ -76,7 +76,7 @@ public class MowerMovementTest {
 
         //When
         Mower mower = new Mower(initialPosition, initialDirection);
-        mower.moveForward();
+        Instruction.FORWARD.execute(mower);
 
         //Then
         assertThat(mower).returns(expectedPosition, Mower::getPosition).returns(expectedDirection, Mower::getDirection);

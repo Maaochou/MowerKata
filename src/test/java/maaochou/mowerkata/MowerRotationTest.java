@@ -19,7 +19,7 @@ public class MowerRotationTest {
 
         //When
         Mower mower = new Mower(initialPosition, initialDirection);
-        mower.turnLeft();
+        Instruction.TURN_LEFT.execute(mower);
 
         //Then
         assertThat(mower).returns(expectedPosition, Mower::getPosition).returns(expectedDirection, Mower::getDirection);
@@ -38,7 +38,7 @@ public class MowerRotationTest {
 
         //When
         Mower mower = new Mower(initialPosition, initialDirection);
-        mower.turnRight();
+        Instruction.TURN_RIGHT.execute(mower);
 
         //Then
         assertThat(mower).returns(expectedPosition, Mower::getPosition).returns(expectedDirection, Mower::getDirection);
@@ -57,7 +57,7 @@ public class MowerRotationTest {
 
         //When
         Mower mower = new Mower(initialPosition, initialDirection);
-        mower.turnLeft();
+        Instruction.TURN_LEFT.execute(mower);
 
         //Then
         assertThat(mower).returns(expectedPosition, Mower::getPosition).returns(expectedDirection, Mower::getDirection);
@@ -76,7 +76,7 @@ public class MowerRotationTest {
 
         //When
         Mower mower = new Mower(initialPosition, initialDirection);
-        mower.turnRight();
+        Instruction.TURN_RIGHT.execute(mower);
 
         //Then
         assertThat(mower).returns(expectedPosition, Mower::getPosition).returns(expectedDirection, Mower::getDirection);
@@ -95,7 +95,7 @@ public class MowerRotationTest {
 
         //When
         Mower mower = new Mower(initialPosition, initialDirection);
-        mower.turnLeft();
+        Instruction.TURN_LEFT.execute(mower);
 
         //Then
         assertThat(mower).returns(expectedPosition, Mower::getPosition).returns(expectedDirection, Mower::getDirection);
@@ -114,7 +114,7 @@ public class MowerRotationTest {
 
         //When
         Mower mower = new Mower(initialPosition, initialDirection);
-        mower.turnRight();
+        Instruction.TURN_RIGHT.execute(mower);
 
         //Then
         assertThat(mower).returns(expectedPosition, Mower::getPosition).returns(expectedDirection, Mower::getDirection);
@@ -133,7 +133,7 @@ public class MowerRotationTest {
 
         //When
         Mower mower = new Mower(initialPosition, initialDirection);
-        mower.turnLeft();
+        Instruction.TURN_LEFT.execute(mower);
 
         //Then
         assertThat(mower).returns(expectedPosition, Mower::getPosition).returns(expectedDirection, Mower::getDirection);
@@ -152,7 +152,7 @@ public class MowerRotationTest {
 
         //When
         Mower mower = new Mower(initialPosition, initialDirection);
-        mower.turnRight();
+        Instruction.TURN_RIGHT.execute(mower);
 
         //Then
         assertThat(mower).returns(expectedPosition, Mower::getPosition).returns(expectedDirection, Mower::getDirection);

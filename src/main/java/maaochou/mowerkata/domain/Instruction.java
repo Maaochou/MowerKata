@@ -18,10 +18,19 @@ public enum Instruction {
         }
     };
 
-    private final String instruction;
+    private final String instructionCode;
 
-    Instruction(String instruction) {
-        this.instruction = instruction;
+    Instruction(String instructionCode) {
+        this.instructionCode = instructionCode;
+    }
+
+    public static Instruction fromCode(String code) {
+        for (Instruction i : Instruction.values()) {
+            if (i.instructionCode.equals(code)) {
+                return i;
+            }
+        }
+        throw new IllegalArgumentException("Invalid instruction code: " + code);
     }
 
     public abstract void execute(Mower mower);

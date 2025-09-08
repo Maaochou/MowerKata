@@ -6,6 +6,8 @@ import maaochou.mowerkata.domain.Mower;
 import maaochou.mowerkata.domain.Position;
 import org.junit.jupiter.api.Test;
 
+import java.util.List;
+
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class MowerRotationTest {
@@ -22,8 +24,8 @@ public class MowerRotationTest {
         Direction expectedDirection = Direction.WEST;
 
         //When
-        Mower mower = new Mower(initialPosition, initialDirection);
-        Instruction.TURN_LEFT.execute(mower);
+        Mower mower = new Mower(initialPosition, initialDirection, null, List.of(Instruction.TURN_LEFT));
+        mower.executeInstructions();
 
         //Then
         assertThat(mower).returns(expectedPosition, Mower::getPosition).returns(expectedDirection, Mower::getDirection);
@@ -41,8 +43,8 @@ public class MowerRotationTest {
         Direction expectedDirection = Direction.EAST;
 
         //When
-        Mower mower = new Mower(initialPosition, initialDirection);
-        Instruction.TURN_RIGHT.execute(mower);
+        Mower mower = new Mower(initialPosition, initialDirection, null, List.of(Instruction.TURN_RIGHT));
+        mower.executeInstructions();
 
         //Then
         assertThat(mower).returns(expectedPosition, Mower::getPosition).returns(expectedDirection, Mower::getDirection);
@@ -60,8 +62,8 @@ public class MowerRotationTest {
         Direction expectedDirection = Direction.EAST;
 
         //When
-        Mower mower = new Mower(initialPosition, initialDirection);
-        Instruction.TURN_LEFT.execute(mower);
+        Mower mower = new Mower(initialPosition, initialDirection, null, List.of(Instruction.TURN_LEFT));
+        mower.executeInstructions();
 
         //Then
         assertThat(mower).returns(expectedPosition, Mower::getPosition).returns(expectedDirection, Mower::getDirection);
@@ -79,8 +81,8 @@ public class MowerRotationTest {
         Direction expectedDirection = Direction.WEST;
 
         //When
-        Mower mower = new Mower(initialPosition, initialDirection);
-        Instruction.TURN_RIGHT.execute(mower);
+        Mower mower = new Mower(initialPosition, initialDirection, null, List.of(Instruction.TURN_RIGHT));
+        mower.executeInstructions();
 
         //Then
         assertThat(mower).returns(expectedPosition, Mower::getPosition).returns(expectedDirection, Mower::getDirection);
@@ -98,8 +100,8 @@ public class MowerRotationTest {
         Direction expectedDirection = Direction.NORTH;
 
         //When
-        Mower mower = new Mower(initialPosition, initialDirection);
-        Instruction.TURN_LEFT.execute(mower);
+        Mower mower = new Mower(initialPosition, initialDirection, null, List.of(Instruction.TURN_LEFT));
+        mower.executeInstructions();
 
         //Then
         assertThat(mower).returns(expectedPosition, Mower::getPosition).returns(expectedDirection, Mower::getDirection);
@@ -117,8 +119,8 @@ public class MowerRotationTest {
         Direction expectedDirection = Direction.SOUTH;
 
         //When
-        Mower mower = new Mower(initialPosition, initialDirection);
-        Instruction.TURN_RIGHT.execute(mower);
+        Mower mower = new Mower(initialPosition, initialDirection, null, List.of(Instruction.TURN_RIGHT));
+        mower.executeInstructions();
 
         //Then
         assertThat(mower).returns(expectedPosition, Mower::getPosition).returns(expectedDirection, Mower::getDirection);
@@ -136,8 +138,8 @@ public class MowerRotationTest {
         Direction expectedDirection = Direction.SOUTH;
 
         //When
-        Mower mower = new Mower(initialPosition, initialDirection);
-        Instruction.TURN_LEFT.execute(mower);
+        Mower mower = new Mower(initialPosition, initialDirection, null, List.of(Instruction.TURN_LEFT));
+        mower.executeInstructions();
 
         //Then
         assertThat(mower).returns(expectedPosition, Mower::getPosition).returns(expectedDirection, Mower::getDirection);
@@ -155,8 +157,8 @@ public class MowerRotationTest {
         Direction expectedDirection = Direction.NORTH;
 
         //When
-        Mower mower = new Mower(initialPosition, initialDirection);
-        Instruction.TURN_RIGHT.execute(mower);
+        Mower mower = new Mower(initialPosition, initialDirection, null, List.of(Instruction.TURN_RIGHT));
+        mower.executeInstructions();
 
         //Then
         assertThat(mower).returns(expectedPosition, Mower::getPosition).returns(expectedDirection, Mower::getDirection);

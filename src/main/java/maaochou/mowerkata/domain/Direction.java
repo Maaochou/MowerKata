@@ -28,13 +28,19 @@ public enum Direction {
         return Arrays.stream(Direction.values()).filter(direction -> direction.directionCode.equals(directionCode)).findFirst().orElseThrow(() -> new IllegalArgumentException("Invalid direction code: " + directionCode));
     }
 
-    public Position moveForward(Position position) {
-        return new Position(position.positionOnXAxis() + movementMovingForward.moveOnXAxisBy(), position.positionOnYAxis() + movementMovingForward.moveOnYAxisBy());
+    public Position moveForward(Position position, Field field) {
+        int xAxis = Math.max(position.positionOnXAxis() + movementMovingForward.moveOnXAxisBy(), 0);
+        int yAxis = Math.max(position.positionOnYAxis() + movementMovingForward.moveOnYAxisBy(), 0);
+        if (field != null) {
+            xAxis = Math.min(xAxis, field.maxPositionOnXAxis());
+            yAxis = Math.min(yAxis, field.maxPositionOnYAxis());
+        }
+
+        return new Position(xAxis, yAxis);
     }
 
     public Direction turnLeft() {
         return values()[this.ordinal() - 1];
-        //return Arrays.stream(Direction.values()).filter(direction -> direction.ordinal() == (this.ordinal() - 1)).findFirst().orElseThrow(() -> new IllegalArgumentException("Invalid direction code: " + this.directionCode));
     }
 
     public Direction turnRight() {

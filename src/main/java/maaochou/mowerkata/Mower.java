@@ -12,4 +12,8 @@ import lombok.Setter;
 public class Mower {
     private Position position;
     private Direction direction;
+
+    public void moveForward() {
+        setPosition(direction.moveForward(position));
+    }
 }

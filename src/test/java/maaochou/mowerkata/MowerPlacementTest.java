@@ -1,5 +1,8 @@
 package maaochou.mowerkata;
 
+import maaochou.mowerkata.domain.Direction;
+import maaochou.mowerkata.domain.Mower;
+import maaochou.mowerkata.domain.Position;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;

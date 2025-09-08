@@ -1,4 +1,4 @@
-package maaochou.mowerkata;
+package maaochou.mowerkata.domain;
 
 public enum Instruction {
     FORWARD("A") {

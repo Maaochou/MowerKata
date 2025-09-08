@@ -1,4 +1,4 @@
-package maaochou.mowerkata;
+package maaochou.mowerkata.domain;
 
 import java.util.Arrays;
 

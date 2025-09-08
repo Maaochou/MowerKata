@@ -1,0 +1,13 @@
+package maaochou.mowerkata;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class MowerKataApplication {
+
+    public static void main(String[] args) {
+        SpringApplication.run(MowerKataApplication.class, args);
+    }
+
+}

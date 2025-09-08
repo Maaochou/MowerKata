@@ -16,4 +16,12 @@ public class Mower {
     public void moveForward() {
         setPosition(direction.moveForward(position));
     }
+
+    public void turnLeft() {
+        setDirection(direction.turnLeft());
+    }
+
+    public void turnRight() {
+        setDirection(direction.turnRight());
+    }
 }

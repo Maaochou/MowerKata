@@ -24,7 +24,7 @@ public class MowerRotationTest {
         Direction expectedDirection = Direction.WEST;
 
         //When
-        Mower mower = new Mower(initialPosition, initialDirection, null, List.of(Instruction.TURN_LEFT));
+        Mower mower = new Mower("mower1", initialPosition, initialDirection, null, List.of(Instruction.TURN_LEFT));
         mower.executeInstructions();
 
         //Then
@@ -43,7 +43,7 @@ public class MowerRotationTest {
         Direction expectedDirection = Direction.EAST;
 
         //When
-        Mower mower = new Mower(initialPosition, initialDirection, null, List.of(Instruction.TURN_RIGHT));
+        Mower mower = new Mower("mower1", initialPosition, initialDirection, null, List.of(Instruction.TURN_RIGHT));
         mower.executeInstructions();
 
         //Then
@@ -62,7 +62,7 @@ public class MowerRotationTest {
         Direction expectedDirection = Direction.EAST;
 
         //When
-        Mower mower = new Mower(initialPosition, initialDirection, null, List.of(Instruction.TURN_LEFT));
+        Mower mower = new Mower("mower1", initialPosition, initialDirection, null, List.of(Instruction.TURN_LEFT));
         mower.executeInstructions();
 
         //Then
@@ -81,7 +81,7 @@ public class MowerRotationTest {
         Direction expectedDirection = Direction.WEST;
 
         //When
-        Mower mower = new Mower(initialPosition, initialDirection, null, List.of(Instruction.TURN_RIGHT));
+        Mower mower = new Mower("mower1", initialPosition, initialDirection, null, List.of(Instruction.TURN_RIGHT));
         mower.executeInstructions();
 
         //Then
@@ -100,7 +100,7 @@ public class MowerRotationTest {
         Direction expectedDirection = Direction.NORTH;
 
         //When
-        Mower mower = new Mower(initialPosition, initialDirection, null, List.of(Instruction.TURN_LEFT));
+        Mower mower = new Mower("mower1", initialPosition, initialDirection, null, List.of(Instruction.TURN_LEFT));
         mower.executeInstructions();
 
         //Then
@@ -119,7 +119,7 @@ public class MowerRotationTest {
         Direction expectedDirection = Direction.SOUTH;
 
         //When
-        Mower mower = new Mower(initialPosition, initialDirection, null, List.of(Instruction.TURN_RIGHT));
+        Mower mower = new Mower("mower1", initialPosition, initialDirection, null, List.of(Instruction.TURN_RIGHT));
         mower.executeInstructions();
 
         //Then
@@ -138,7 +138,7 @@ public class MowerRotationTest {
         Direction expectedDirection = Direction.SOUTH;
 
         //When
-        Mower mower = new Mower(initialPosition, initialDirection, null, List.of(Instruction.TURN_LEFT));
+        Mower mower = new Mower("mower1", initialPosition, initialDirection, null, List.of(Instruction.TURN_LEFT));
         mower.executeInstructions();
 
         //Then
@@ -157,7 +157,7 @@ public class MowerRotationTest {
         Direction expectedDirection = Direction.NORTH;
 
         //When
-        Mower mower = new Mower(initialPosition, initialDirection, null, List.of(Instruction.TURN_RIGHT));
+        Mower mower = new Mower("mower1", initialPosition, initialDirection, null, List.of(Instruction.TURN_RIGHT));
         mower.executeInstructions();
 
         //Then

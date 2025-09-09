@@ -25,7 +25,7 @@ public class MowerMultipleInstructionsTest {
         Direction expectedDirection = Direction.NORTH;
 
         //When
-        Mower mower = new Mower(initialPosition, initialDirection, null, List.of(Instruction.FORWARD, Instruction.FORWARD));
+        Mower mower = new Mower("mower1", initialPosition, initialDirection, null, List.of(Instruction.FORWARD, Instruction.FORWARD));
         mower.executeInstructions();
 
         //Then
@@ -46,7 +46,7 @@ public class MowerMultipleInstructionsTest {
         Direction expectedDirection = Direction.EAST;
 
         //When
-        Mower mower = new Mower(initialPosition, initialDirection, field, List.of(Instruction.FORWARD, Instruction.FORWARD, Instruction.FORWARD, Instruction.FORWARD, Instruction.FORWARD, Instruction.TURN_RIGHT, Instruction.FORWARD, Instruction.FORWARD, Instruction.FORWARD, Instruction.FORWARD, Instruction.FORWARD));
+        Mower mower = new Mower("mower1", initialPosition, initialDirection, field, List.of(Instruction.FORWARD, Instruction.FORWARD, Instruction.FORWARD, Instruction.FORWARD, Instruction.FORWARD, Instruction.TURN_RIGHT, Instruction.FORWARD, Instruction.FORWARD, Instruction.FORWARD, Instruction.FORWARD, Instruction.FORWARD));
         mower.executeInstructions();
 
         //Then

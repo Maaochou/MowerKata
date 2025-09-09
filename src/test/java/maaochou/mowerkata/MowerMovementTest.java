@@ -25,7 +25,7 @@ public class MowerMovementTest {
         Direction expectedDirection = Direction.NORTH;
 
         //When
-        Mower mower = new Mower(initialPosition, initialDirection, null, List.of(Instruction.FORWARD));
+        Mower mower = new Mower("mower1", initialPosition, initialDirection, null, List.of(Instruction.FORWARD));
         mower.executeInstructions();
 
         //Then
@@ -44,7 +44,7 @@ public class MowerMovementTest {
         Direction expectedDirection = Direction.EAST;
 
         //When
-        Mower mower = new Mower(initialPosition, initialDirection, null, List.of(Instruction.FORWARD));
+        Mower mower = new Mower("mower1", initialPosition, initialDirection, null, List.of(Instruction.FORWARD));
         mower.executeInstructions();
 
         //Then
@@ -63,7 +63,7 @@ public class MowerMovementTest {
         Direction expectedDirection = Direction.WEST;
 
         //When
-        Mower mower = new Mower(initialPosition, initialDirection, null, List.of(Instruction.FORWARD));
+        Mower mower = new Mower("mower1", initialPosition, initialDirection, null, List.of(Instruction.FORWARD));
         mower.executeInstructions();
 
         //Then
@@ -82,7 +82,7 @@ public class MowerMovementTest {
         Direction expectedDirection = Direction.SOUTH;
 
         //When
-        Mower mower = new Mower(initialPosition, initialDirection, null, List.of(Instruction.FORWARD));
+        Mower mower = new Mower("mower1", initialPosition, initialDirection, null, List.of(Instruction.FORWARD));
         mower.executeInstructions();
 
         //Then
@@ -103,7 +103,7 @@ public class MowerMovementTest {
         Direction expectedDirection = Direction.WEST;
 
         //When
-        Mower mower = new Mower(initialPosition, initialDirection, field, List.of(Instruction.FORWARD));
+        Mower mower = new Mower("mower1", initialPosition, initialDirection, field, List.of(Instruction.FORWARD));
         mower.executeInstructions();
 
         //Then
@@ -124,7 +124,7 @@ public class MowerMovementTest {
         Direction expectedDirection = Direction.NORTH;
 
         //When
-        Mower mower = new Mower(initialPosition, initialDirection, field, List.of(Instruction.FORWARD));
+        Mower mower = new Mower("mower1", initialPosition, initialDirection, field, List.of(Instruction.FORWARD));
         mower.executeInstructions();
 
         //Then

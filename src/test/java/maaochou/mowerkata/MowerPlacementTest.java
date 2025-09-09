@@ -20,7 +20,7 @@ public class MowerPlacementTest {
         Position expectedPosition = new Position(positionOnXAxis, positionOnYAxis);
         Direction expectedDirection = Direction.NORTH;
         //When
-        Mower mower = new Mower(initialPosition, initialDirection, null, null);
+        Mower mower = new Mower("mower1", initialPosition, initialDirection, null, null);
 
         //Then
         assertThat(mower).returns(expectedPosition, Mower::getPosition).returns(expectedDirection, Mower::getDirection);

@@ -11,12 +11,14 @@ import java.util.List;
 @Setter
 @EqualsAndHashCode
 public class Mower {
+    private String id;
     private Position position;
     private Direction direction;
     private Field field;
     private List<Instruction> instructions;
 
-    public Mower(Position position, Direction direction, Field field, List<Instruction> instructions) {
+    public Mower(String id, Position position, Direction direction, Field field, List<Instruction> instructions) {
+        this.id = id;
         this.position = position;
         this.direction = direction;
         this.field = field;
@@ -39,6 +41,7 @@ public class Mower {
     public void executeInstructions() {
         for (int i = 0; i < instructions.size(); ) {
             instructions.get(i).execute(this);
+            // I decided arbitrarily that an executed instruction is removed.
             instructions.remove(i);
         }
     }

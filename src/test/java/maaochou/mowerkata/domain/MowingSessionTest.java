@@ -1,11 +1,5 @@
-package maaochou.mowerkata;
+package maaochou.mowerkata.domain;
 
-import maaochou.mowerkata.domain.Direction;
-import maaochou.mowerkata.domain.Field;
-import maaochou.mowerkata.domain.Instruction;
-import maaochou.mowerkata.domain.Mower;
-import maaochou.mowerkata.domain.MowingSession;
-import maaochou.mowerkata.domain.Position;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;

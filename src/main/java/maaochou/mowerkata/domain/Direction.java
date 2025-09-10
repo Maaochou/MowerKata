@@ -1,5 +1,7 @@
 package maaochou.mowerkata.domain;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
+
 import java.util.Arrays;
 
 public enum Direction {
@@ -24,6 +26,7 @@ public enum Direction {
         this.movementMovingForward = movementMovingForward;
     }
 
+    @JsonCreator
     public static Direction fromCode(String directionCode) {
         return Arrays.stream(Direction.values()).filter(direction -> direction.directionCode.equals(directionCode)).findFirst().orElseThrow(() -> new IllegalArgumentException("Invalid direction code: " + directionCode));
     }

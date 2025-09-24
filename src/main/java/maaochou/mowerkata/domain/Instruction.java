@@ -2,28 +2,17 @@ package maaochou.mowerkata.domain;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 
+import java.util.function.Consumer;
+
 public enum Instruction {
-    FORWARD("A") {
-        @Override
-        public void execute(Mower mower) {
-            mower.moveForward();
-        }
-    }, TURN_LEFT("G") {
-        @Override
-        public void execute(Mower mower) {
-            mower.turnLeft();
-        }
-    }, TURN_RIGHT("D") {
-        @Override
-        public void execute(Mower mower) {
-            mower.turnRight();
-        }
-    };
+    FORWARD("A", Mower::moveForward), TURN_LEFT("G", Mower::turnLeft), TURN_RIGHT("D", Mower::turnRight);
 
     private final String instructionCode;
+    private final Consumer<Mower> consumer;
 
-    Instruction(String instructionCode) {
+    Instruction(String instructionCode, Consumer<Mower> consumer) {
         this.instructionCode = instructionCode;
+        this.consumer = consumer;
     }
 
     @JsonCreator
@@ -36,5 +25,7 @@ public enum Instruction {
         throw new IllegalArgumentException("Invalid instruction code: " + code);
     }
 
-    public abstract void execute(Mower mower);
+    public void execute(Mower mower) {
+        consumer.accept(mower);
+    }
 }
